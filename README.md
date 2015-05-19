@@ -93,6 +93,7 @@ Other rules to include:
  - Venue name should be present
  - Neighborhood name should be present
  - Neighborhood name/city combination should be unique
+ - Favorite user_id, dish_id, and cuisine_id should be present
 
 ## Part 2: Add Associations
 
