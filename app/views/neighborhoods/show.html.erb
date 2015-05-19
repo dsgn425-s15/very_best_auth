@@ -35,11 +35,25 @@
       </div>
 
       <ul class="list-group">
-      <% @neighborhood.venues.each do |venue| %>
-        <li class="list-group-item">
-          <%= venue.name %>
+        <li class="list-group-item list-group-item-success">
+          All Venues
         </li>
-      <% end %>
+        <% @neighborhood.venues.each do |venue| %>
+          <li class="list-group-item">
+            <%= venue.name %>
+          </li>
+        <% end %>
+      </ul>
+
+      <ul class="list-group">
+        <li class="list-group-item list-group-item-success">
+          Favorites
+        </li>
+        <% @neighborhood.favorites.each do |favorite| %>
+          <li class="list-group-item">
+            <%= favorite.user.username %> likes <%= favorite.dish.name %> at <%= favorite.venue.name %>
+          </li>
+        <% end %>
       </ul>
 
     </div>
