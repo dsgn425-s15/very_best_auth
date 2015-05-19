@@ -48,7 +48,7 @@
               Neighborhood
             </label>
             <div class="col-sm-10">
-              <input type="text" id="neighborhood_id" name="neighborhood_id" placeholder="Neighborhood" class="form-control" value="<%= @venue.neighborhood_id %>">
+              <%= select_tag(:neighborhood_id, options_from_collection_for_select(Neighborhood.all, :id, :name, @venue.neighborhood_id), :class => "form-control") %>
             </div>
           </div>
 
