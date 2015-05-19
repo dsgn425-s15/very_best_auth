@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root "favorites#index"
+
   # Routes for the Neighborhood resource:
   # CREATE
   get "/neighborhoods/new", :controller => "neighborhoods", :action => "new"
