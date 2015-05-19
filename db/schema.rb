@@ -48,11 +48,4 @@ ActiveRecord::Schema.define(version: 20150519195809) do
     t.datetime "updated_at"
   end
 
-  create_table "venues", force: :cascade do |t|
-    t.string   "address"
-    t.integer  "neighborhood_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
 end
