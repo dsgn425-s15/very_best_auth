@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 
 gem 'starter_generators', :git => "http://github.com/rbetina/starter_generators.git", :branch => "simple"
 
