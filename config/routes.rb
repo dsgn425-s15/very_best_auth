@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  devise_for :users
+   root "favorites#index"
+   # get "/", :controller => "favorites", :action => "index"
+
   # Routes for the Venue resource:
   # CREATE
   get "/venues/new", :controller => "venues", :action => "new"
@@ -17,7 +21,7 @@ Rails.application.routes.draw do
   get "/delete_venue/:id", :controller => "venues", :action => "destroy"
   #------------------------------
 
-  root "favorites#index"
+
 
   # Routes for the Neighborhood resource:
   # CREATE

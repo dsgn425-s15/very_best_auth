@@ -48,6 +48,16 @@
           <li><a href="/cuisines">Cuisines</a></li>
           <li><a href="/favorites">Favorites</a></li>
         </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <% if current_user.present? %>
+            <li><a href="/users/edit"><%= current_user.username %></a></li>
+            <li><a href="/users/sign_out" data-method="delete">Sign out</a></li>
+
+          <% else %>
+            <li><a href="/users/sign_in">Sign in</a></li>
+            <li><a href="/users/sign_up">Sign up</a></li>
+          <% end %>
+        </ul>
       </div><!-- /.navbar-collapse -->
     </div>
   </nav>
